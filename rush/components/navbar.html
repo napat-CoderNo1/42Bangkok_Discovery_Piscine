@@ -1,0 +1,48 @@
+<!------- Mobile Navbar -------->
+<button class="btn hamburger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            <ul class="mobile__nav__list">
+                <li class="mobile__nav__item">Home</li>
+                <li class="mobile__nav__item">About</li>
+                <li class="mobile__nav__item">Contact</li>
+            </ul>
+            <!-- Put navbar body Here -->
+        </div>
+    </div>
+</div>
+<!------- End Mobile Nabbar -------->
+
+<!------- Navbar -------->
+<nav class="d-none d-lg-flex flex-column justify-content-center">
+    <ul>
+        <li class="nav__item">
+            <a href="#home">
+                <i class="fa-regular fa-house"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a href="#about">
+                <i class="fa-solid fa-user"></i>
+                <span>About</span>
+            </a>
+        </li>
+        <li class="nav__item">
+            <a href="#contact">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<!------- End Navbar -------->
