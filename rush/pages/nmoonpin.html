@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rush Project</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/styles/nmoonpin.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2ebe22f94b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!------- Mobile Navbar -------->
+    <button
+      class="btn hamburger d-lg-none"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <a class="mobile__nav__item" href="../index.html">
+          <i class="fa-solid fa-house-user"></i>
+          <span>Home</span>
+        </a>
+        <div
+          class="mobile__nav__item"
+          data-bs-dismiss="offcanvas"
+          onclick="scrollPage('about')"
+        >
+          <i class="fa-solid fa-user"></i>
+          <span>About</span>
+        </div>
+        <div
+          class="mobile__nav__item"
+          data-bs-dismiss="offcanvas"
+          onclick="scrollPage('contact')"
+        >
+          <i class="fa-regular fa-envelope"></i>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+    <!------- End Mobile Nabbar -------->
+
+    <!------- Navbar -------->
+    <nav class="d-none d-lg-flex flex-column justify-content-center">
+      <ul>
+        <li class="nav__item">
+          <a href="../index.html">
+            <i class="fa-solid fa-house-user"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#about">
+            <i class="fa-solid fa-user"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!------- End Navbar -------->
+
+    <!------- Home -------->
+    <section id="home" class="page pat__home">
+      <div class="home__content">
+        <h1 onclick="randomColor('name')" id="name" class="pointer">Napat</h1>
+        <p>I'm a Backend Developer and Real estate investor</p>
+      </div>
+    </section>
+    <!------- End Home -------->
+
+    <!------- About -------->
+    <section id="about" class="container-lg">
+      <div class="header">
+        <h2>ABOUT</h2>
+        <!-- <p class="tagline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+        laboriosam voluptatum doloremque suscipit
+      </p> -->
+      </div>
+
+      <div class="about__information">
+        <div
+          class="about__img pat__img"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        ></div>
+        <div class="infomation__detail">
+          <h3 class="d-lg-none">Personal Infomation</h3>
+          <div class="infomation__grid">
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Name</span>
+              <p>Napat Moonpinit</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Nickname</span>
+              <p>Pat</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Age</span>
+              <p>20</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Birthday</span>
+              <p>19 November 2001</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Hobby</span>
+              <p>Sing and Football</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>GPA</span>
+              <p>3.54</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>Education</span>
+              <p>Computer Engineering, KMITL</p>
+            </div>
+            <div
+              class="info"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+            >
+              <span>City</span>
+              <p>Bangkok, Thailand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End About -------->
+
+    <!------- Exprerience -------->
+    <section class="experiance">
+      <div class="container-lg">
+        <div class="header">
+          <h2>Experiance</h2>
+          <!-- <p class="tagline">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+          laboriosam voluptatum
+        </p> -->
+        </div>
+
+        <div class="experiance__box">
+          <ol>
+            <li>
+              <h3>LadkrabangExpress</h3>
+              <p>train ticket booking website</p>
+              <ul>
+                <li>
+                  I'm in charge of
+                  <span>Backend</span> Department.
+                </li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3>Life At KMITL</h3>
+              <p>
+                It is a website that will facilitating your daily life in the
+                university.
+              </p>
+              <ul>
+                <li>
+                  I'm in charge both of
+                  <span>Frontend and Backend</span> Department.
+                </li>
+                <li>React.js</li>
+                <li>Tailwind</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </li>
+
+            <li>
+              <h3>Know before you buy</h3>
+              <p>Book Review Application.</p>
+              <ul>
+                <li>
+                  I'm in charge of
+                  <span>Backend</span> Department.
+                </li>
+                <li>Python</li>
+                <li>PyQt</li>
+                <li>Data Structure</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!------- End Skill -------->
+
+    <!------- Skill -------->
+    <section class="skill">
+      <div class="container-lg">
+        <div class="header">
+          <h2>SKILL</h2>
+          <!-- <p class="tagline">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+          laboriosam voluptatum
+        </p> -->
+        </div>
+
+        <div class="progress__container">
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>Python</h6>
+              <h6>70%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 70%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>Node.js / Express.js</h6>
+              <h6>60%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 60%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>JS</h6>
+              <h6>50%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 50%"
+              ></div>
+            </div>
+          </div>
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>HTML</h6>
+              <h6>40%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 40%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>CSS</h6>
+              <h6>30%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 30%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar">
+            <div class="d-flex justify-content-between">
+              <h6>C++</h6>
+              <h6>20%</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 20%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End Skill -------->
+
+    <!------- Contact -------->
+    <section id="contact" class="container-lg">
+      <div class="header">
+        <h2>CONTACT</h2>
+        <!-- <p class="tagline">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
+        laboriosam voluptatum
+      </p> -->
+      </div>
+      <div class="contact__container">
+        <div class="contact__info pat__anima">
+          <div class="pointer">
+            <a
+              href="https://www.google.com/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%88%E0%B8%AD%E0%B8%A1%E0%B9%80%E0%B8%81%E0%B8%A5%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%97%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%A5%E0%B8%B2%E0%B8%94%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%B1%E0%B8%87/@13.7298941,100.7760383,17z/data=!3m1!4b1!4m5!3m4!1s0x311d664988a1bedf:0xcc678f180e221cd0!8m2!3d13.7298889!4d100.7782323"
+              target="_blank"
+            >
+              <i class="fa-solid fa-location-dot" id="location"></i>
+            </a>
+          </div>
+          <div class="contact__detail">
+            <h6>Location</h6>
+            <p>1 Chalong Krung, 1 Alley, Lat Krabang, Bangkok 10520</p>
+          </div>
+        </div>
+
+        <div class="contact__info pat__anima">
+          <div class="pointer">
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+              target="_blank"
+            >
+              <i class="fa-regular fa-envelope" id="mail"></i>
+            </a>
+          </div>
+          <div class="contact__detail">
+            <h6>Email</h6>
+            <p>f1.2544pat@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact__info pat__anima">
+          <div onclick="randomColor('phone')" class="pointer">
+            <i class="fa-solid fa-mobile" id="phone"></i>
+          </div>
+          <div class="contact__detail">
+            <h6>Call</h6>
+            <p>+66 0844561959</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End Contact -------->
+
+    <!------- Footer -------->
+    <footer>
+      <div class="container-lg p-4">
+        <div class="footer__header">
+          <h2 onclick="addCount()" class="pointer">Napat</h2>
+          <!-- <p>Lorem ipsum dolor sit amet.</p> -->
+        </div>
+
+        <div>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://github.com/napat-CoderNo1" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://www.instagram.com/napatxlife/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://www.facebook.com/napat.moonpinij.1/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="copyright">&copy; Copyright Napat. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!------- End Footer -------->
+
+    <!-- JS -->
+    <script src="../assets/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

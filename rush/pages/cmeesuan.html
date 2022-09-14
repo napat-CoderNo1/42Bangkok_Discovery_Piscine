@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rush Project</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/styles/cmeesuan.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2ebe22f94b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!------- Mobile Navbar -------->
+    <button
+      class="btn hamburger d-lg-none"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <a href="../index.html" class="mobile__nav__item">
+          <i class="fa-solid fa-house-user"></i>
+          <span>Home</span>
+        </a>
+        <div
+          class="mobile__nav__item"
+          data-bs-dismiss="offcanvas"
+          onclick="scrollPage('about')"
+        >
+          <i class="fa-solid fa-user"></i>
+          <span>About</span>
+        </div>
+        <div
+          class="mobile__nav__item"
+          data-bs-dismiss="offcanvas"
+          onclick="scrollPage('contact')"
+        >
+          <i class="fa-regular fa-envelope"></i>
+          <span>Contact</span>
+        </div>
+      </div>
+    </div>
+    <!------- End Mobile Nabbar -------->
+
+    <!------- Navbar -------->
+    <nav class="d-none d-lg-flex flex-column justify-content-center">
+      <ul>
+        <li class="nav__item">
+          <a href="../index.html">
+            <i class="fa-solid fa-house-user"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#about">
+            <i class="fa-solid fa-user"></i>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!------- End Navbar -------->
+
+    <!------- Home -------->
+    <section id="home" class="page">
+      <div class="home__content" data-aos="fade-up">
+        <h1 id="name" class="zan__header">Zantaclaus</h1>
+        <p>I'm a Frontend Developer</p>
+      </div>
+    </section>
+    <!------- End Home -------->
+
+    <!------- About -------->
+    <section id="about" class="container-lg">
+      <div class="header">
+        <h2>ABOUT</h2>
+        <p class="tagline">
+          Hi! I'm Zan. I'm a third year Computer Engineering student at KMITL.
+        </p>
+      </div>
+
+      <div class="about__information">
+        <div class="about__img zantalaus__img" data-aos="fade-right"></div>
+        <div class="infomation__detail">
+          <h3 class="d-lg-none">Personal Infomation</h3>
+          <div class="infomation__grid">
+            <div class="info" data-aos="fade-left" data-aos-duration="100">
+              <span>Name</span>
+              <p>Chinathip Meesuannil</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="200">
+              <span>Nickname</span>
+              <p>Zan</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="300">
+              <span>Age</span>
+              <p>20</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="400">
+              <span>Birthday</span>
+              <p>30 Dec 2001</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="500">
+              <span>Hobby</span>
+              <p>Guitar and Games</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="600">
+              <span>GPA</span>
+              <p>3.73</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="700">
+              <span>Education</span>
+              <p>Computer Engineering, KMITL</p>
+            </div>
+            <div class="info" data-aos="fade-left" data-aos-duration="800">
+              <span>City</span>
+              <p>Bangkok, Thailand</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End About -------->
+
+    <!------- Exprerience -------->
+    <section class="experiance">
+      <div class="container-lg">
+        <div class="header">
+          <h2>Experiance</h2>
+        </div>
+
+        <div class="experiance__box">
+          <ol>
+            <li data-aos="fade-up">
+              <h3>Thai Economap</h3>
+              <p>
+                <a
+                  href="https://demo.thaieconomap.com"
+                  target="_blank"
+                  class="demo__link"
+                  >demo.thaieconomap.com</a
+                >
+              </p>
+              <ul>
+                <li>Lead of Frontend Team</li>
+                <li>
+                  The web application that
+                  <span> facilitated online food </span> ordering for local
+                  store by using map and line service.
+                </li>
+                <li>Tech Stack : ReactTS NestJS MongoDB</li>
+                <li>*** This demo only ready on mobile ***</li>
+              </ul>
+            </li>
+
+            <li data-aos="fade-left">
+              <h3>Teawtip Chiangrai</h3>
+              <p>
+                <a
+                  href="https://teawtip-changrai.netlify.app"
+                  target="_blank"
+                  class="demo__link"
+                  >teawtip-changrai.netlify.app</a
+                >
+              </p>
+              <ul>
+                <li>Lead of Frontend Team</li>
+                <li>
+                  The website that will take you to know more information about
+                  <span>Chiangrai, Thailand </span>.
+                </li>
+                <li>
+                  This demo deploy on free hosting. Don't be serious if website
+                  loads slowly.
+                </li>
+                <li>Tech Stack : ReactTS</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!------- End Skill -------->
+
+    <!------- Skill -------->
+    <section class="skill">
+      <div class="container-lg">
+        <div class="header">
+          <h2>SKILL</h2>
+        </div>
+
+        <div class="progress__container">
+          <div class="progress__bar" data-aos="flip-left">
+            <div class="d-flex justify-content-between">
+              <h6>HTML</h6>
+              <h6 style="color: #68d46f">Advanced</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar" data-aos="flip-left">
+            <div class="d-flex justify-content-between">
+              <h6>CSS</h6>
+              <h6 style="color: #68d46f">Advanced</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar" data-aos="flip-left">
+            <div class="d-flex justify-content-between">
+              <h6>JS</h6>
+              <h6 style="color: #68d46f">Advanced</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar" data-aos="flip-right">
+            <div class="d-flex justify-content-between">
+              <h6>React JS/TS</h6>
+              <h6 style="color: #ff9d0b">Intermediate</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 70%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar" data-aos="flip-right">
+            <div class="d-flex justify-content-between">
+              <h6>Node.js</h6>
+              <h6 style="color: #ff9d0b">Intermediate</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 70%"
+              ></div>
+            </div>
+          </div>
+
+          <div class="progress__bar" data-aos="flip-right">
+            <div class="d-flex justify-content-between">
+              <h6>Python</h6>
+              <h6 style="color: #f37142">Elementary</h6>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar progress-bar-striped progress--html progress-bar-animated"
+                role="progressbar"
+                aria-label="Default striped example"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                style="width: 50%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End Skill -------->
+
+    <!------- Contact -------->
+    <section id="contact" class="container-lg">
+      <div class="header">
+        <h2>CONTACT</h2>
+      </div>
+      <div class="contact__container" data-aos="fade-up">
+        <div class="contact__info">
+          <div onclick="randomColor('location')" class="pointer">
+            <i class="fa-solid fa-location-dot" id="location"></i>
+          </div>
+          <div class="contact__detail">
+            <h6>Location</h6>
+            <p>Ladkrabang, Bangkok, Thailand 10520</p>
+          </div>
+        </div>
+
+        <div class="contact__info">
+          <div onclick="randomColor('mail')" class="pointer">
+            <i class="fa-regular fa-envelope" id="mail"></i>
+          </div>
+          <div class="contact__detail">
+            <h6>Email</h6>
+            <p>tarzuto@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact__info">
+          <div onclick="randomColor('phone')" class="pointer">
+            <i class="fa-solid fa-mobile" id="phone"></i>
+          </div>
+          <div class="contact__detail">
+            <h6>Call</h6>
+            <p>+66 97-047-2541</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------- End Contact -------->
+
+    <!------- Footer -------->
+    <footer>
+      <div class="container-lg p-4">
+        <div class="footer__header">
+          <h2 onclick="addCount()" class="pointer zantalaus__btn">
+            Zantaclaus
+          </h2>
+          <p>click the upper me <3</p>
+        </div>
+
+        <div>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://github.com/zantaclaus" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://www.instagram.com/zantaclaus/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="https://www.facebook.com/zantacluse/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="copyright">
+          &copy; Copyright Zantaclaus. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!------- End Footer -------->
+
+    <!-- JS -->
+    <script src="../assets/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

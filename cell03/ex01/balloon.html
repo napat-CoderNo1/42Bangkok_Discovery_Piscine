@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #balloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+    <script>
+        var size = 200;
+        var color = "red";
+        const balloon = document.getElementById("balloon");
+        function change_color() {
+            const balloon = document.getElementById("balloon");
+            if (color == "red") {
+                color = "green";
+            }
+            else if (color == "green") {
+                color = "blue";
+            }
+            else if (color == "blue") {
+                color = "red";
+            }
+            return (color);
+        }
+        function invert_color() {
+            const balloon = document.getElementById("balloon");
+            if (color == "red") {
+                color = "blue";
+            }
+            else if (color == "blue") {
+                color = "green";
+            }
+            else if (color == "green") {
+                color = "red";
+            }
+            return (color);
+        }
+
+        function youclick() {
+            const balloon = document.getElementById("balloon");
+            balloon.style.backgroundColor = change_color();
+            if (size < 420) {
+                size = size + 10;
+            }
+            else {
+                size = 200;
+            }
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+        }
+        function youleave() {
+            const balloon = document.getElementById("balloon");
+            balloon.style.backgroundColor = invert_color();
+            if (size > 200) {
+                size = size - 5;
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="balloon" onclick="youclick();" onmouseleave="youleave()">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.dropdown {
+  width: fit-content;
+}
+
+.dropdown__btn {
+  width: fit-content;
+  padding: 10px 16px;
+  background-color: aquamarine;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown__btn:hover {
+  background-color: rgb(86, 251, 196);
+}
+
+.dropdown__content {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+  width: fit-content;
+  background-color: aqua;
+  list-style: none;
+}
+
+.dropdown__content li {
+  padding: 10px 200px 10px 20px;
+  cursor: pointer;
+}
+
+.dropdown__content li:hover {
+  background-color: rgb(0, 217, 255);
+}

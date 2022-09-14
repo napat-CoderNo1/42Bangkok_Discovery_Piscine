@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todo List</title>
+    <style>
+        .todo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            row-gap: 0.5rem;
+        }
+
+        .todo>* {
+            width: 25rem;
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            text-align: left;
+            border: none;
+            border-bottom: 3px solid #BBB;
+            background-color: #F4F4F4;
+            color: #333;
+            border-radius: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./todo.js" defer async></script>
+</head>
+
+<body>
+    <div>
+        <h1>Todo List</h1>
+        <form id="todo_form">
+            <div class="todo" id="ft_list">
+            </div>
+            <input id="new_todo" type="submit" value="New"></button>
+        </form>
+    </div>
+</body>
+
+</html>

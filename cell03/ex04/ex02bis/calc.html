@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <form id="calculator_form" action="#" autocomplete="off">
+            <div class="form">
+                <input id="operand_left" type="text" placeholder="Number">
+                <select id="operator" tabindex="-1">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+                <input id="operand_right" type="text" placeholder="Number">
+            </div>
+            <div class="button">
+                <input type="submit" value="Try me!"></input>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let operand_left_input = $("#operand_left");
+    let operand_right_input = $("#operand_right");
+    let operator_input = $("#operator");
+    let form = $("#calculator_form");
+
+    setInterval(() => {
+        alert("Please, use me...");
+    }, 30000);
+
+    $(document).ready(function () {
+        form.submit(function () {
+            let operand_left = parseFloat(operand_left_input.val());
+            let operand_right = parseFloat(operand_right_input.val());
+            let operator = operator_input.val();
+
+            let is_error_left = isNaN(operand_left) || operand_left < 0;
+            let is_error_right = isNaN(operand_right) || operand_right < 0;
+            if (is_error_left || is_error_right) {
+                alert("Error :(");
+                return;
+            }
+            if ((operator == "/" || operator == "%") && operand_right === 0) {
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
+                return;
+            }
+
+            let result = 0;
+            if (operator === "+") {
+                result = operand_left + operand_right;
+            } else if (operator === "-") {
+                result = operand_left - operand_right;
+            } else if (operator === "*") {
+                result = operand_left * operand_right;
+            } else if (operator === "/") {
+                result = operand_left / operand_right;
+            } else if (operator === "%") {
+                result = operand_left % operand_right;
+            }
+            console.log(result);
+            alert(result);
+        });
+    });
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        setInterval(function () {
+            alert("Please, use me...");
+        }, 30000);
+
+        function main() {
+            const fnum = document.getElementById("fnum").value;
+            const operator = document.getElementById("op").value;
+            const snum = document.getElementById("snum").value;
+            if ((operator == '/' || operator == '%') && snum == '0') {
+                console.log("It's over 9000!")
+                alert("It's over 9000!")
+                return 0;
+            }
+            if (fnum > 0 && snum > 0) {
+                let sum = fnum + operator + snum;
+                let ans = eval(sum);
+                alert(ans);
+                console.log(ans);
+            }
+            else {
+                alert("Error :(");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="fnum" name="fnum">
+    <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value=""></option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="snum" name="snum">
+    <input type="button" onclick="main()" value="Try me!">
+</body>
+
+</html>
